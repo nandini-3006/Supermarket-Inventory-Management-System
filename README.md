@@ -1,3 +1,5 @@
+📌 Status ✅ In Progress
+
 🛒 Supermarket Inventory Management System A comprehensive inventory, sales, and employee management system designed for supermarkets and retail stores. Built using Spring Boot and react, this system efficiently handles stock tracking, billing, reporting, profit analysis, and employee operations all in one place.
 
 📦 Product Management Each product includes: ✅ Supplier ✅ Price ✅ Stock Quantity ✅ Brand ✅ Product Name ✅ Expiry / Damaged Status
@@ -13,5 +15,3 @@
 🛠️ Tech Stack Layer Technology 🔙 Backend Java, Spring Boot 💾 Database MySQL 🔐 Auth JWT (JSON Web Tokens) 🎨 Frontend React (Web) 🚀 Deployment
 
 🧠 Skills Demonstrated 🧱 Object-Oriented Design & Class Structuring 🔧 Spring Boot REST API Development 🗄️ MySQL Relational DB Design 🔐 JWT Authentication & Role-Based Access Control 🧮 Real-World Algorithms: Sorting, Filtering, Billing, Discounts 🧩 Modular Architecture & Scalable System Design 💻 UI Development with React 📄 Report Generation, PDF Export & QR Code Integration
-
-📌 Status ✅ In Progress
