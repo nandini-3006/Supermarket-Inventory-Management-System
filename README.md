@@ -4,8 +4,6 @@
 
 📦 Product Management Each product includes: ✅ Supplier ✅ Price ✅ Stock Quantity ✅ Brand ✅ Product Name ✅ Expiry / Damaged Status
 
-🗂️ Product Categories: 🧴 Toiletries 👕 Wearables 🍪 Food & Beverages 🧹 Household Essentials 🧸 Toys & Games
-
 📈 Sales, Reporting & Stock Management 🔄 Stock In / Stock Out with employee tracking ⭐ Top-Selling Products report ⚠️ Low Stock / Out-of-Stock / Expired / Damaged Alerts 🧾 Billing: Includes customer info, timestamp, and product sale history 📊 Visual Reports: Charts & graphs for easy analysis 🔍 Search & Filter: Filter by brand, expiry date, and more 📷 Barcode / QR Code Scanning support 🧾 Bill Export in PDF (includes employee activity) 🚚 Supplier Management with linked stock tracking 💰 Profit & Discount Calculation 📆 Monthly Profit Calculation (after subtracting salaries & stock cost) 🎯 Targeted Discounts: Set discounts for selected products & time periods 🧾 Tax and Packaging Cost Management
 
 👥 Employee Management System 📷 QR-Based Attendance Tracking 💵 Salary Calculation & Logs 🧑‍💼 Employee Personal Info: Join Date, Role, etc. 🕘 Logout & Login Time Tracking 🔐 Role-Based Authentication (JWT-secured access control)
