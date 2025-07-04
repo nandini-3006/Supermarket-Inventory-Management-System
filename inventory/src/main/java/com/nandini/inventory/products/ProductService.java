@@ -1,5 +1,6 @@
 package com.nandini.inventory.products;
 
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
@@ -30,7 +31,35 @@ public void billing(List<BillingDTO> list){
         BillingDTO product =list.get(i);
         ProductEntity set=productRepository.findFirstByNameAndBrandOrderByExpiryAsc(product.getName(),product.getBrand()).orElseThrow(() -> new RuntimeException("Product not found"));
         set.setQuantity(set.getQuantity()-product.getQuantity());
+        if(set.getQuantity()<=0){
+            productRepository.delete(set);
+        }
             productRepository.save(set);
         }
 }
+    @Scheduled(fixedRate = 1000)
+    public void expired(){
+        LocalDate today=LocalDate.now();
+        List<ProductEntity> product = productRepository.findAll();
+        int s=product.size();
+        for(int i=0;i<s;i++) {
+            if (today.isAfter(product.get(i).getExpiry())) {
+                productRepository.delete(product.get(i));
+            }
+        }
+    }
+public void damaged(List<DamagedDTO> list){
+        int s=list.size();
+        for(int i=0;i<s;i++) {
+            ProductEntity set = productRepository.findByNameAndBrandAndExpiry(list.get(i).getName(),list.get(i).getBrand(),list.get(i).getExpiry()).orElseThrow(() -> new RuntimeException("Product not found"));
+            set.setQuantity(set.getQuantity() - list.get(i).getQuantity());
+            if(set.getQuantity()<=0){
+                productRepository.delete(set);
+            }
+            else {
+                productRepository.save(set);
+            }
+        }
+        }
+
 }

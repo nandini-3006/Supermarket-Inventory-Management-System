@@ -34,4 +34,13 @@ public ResponseEntity<String> billing(@RequestBody BillingListDTO body) {
         return ResponseEntity.badRequest().build();
     }
 }
+    @PostMapping("/damaged")
+    public ResponseEntity<String> damaged(@RequestBody DamagedListDTO body) {
+        try {
+            productService.damaged(body.getList());
+            return ResponseEntity.ok("Successful");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

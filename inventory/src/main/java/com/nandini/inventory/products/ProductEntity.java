@@ -33,4 +33,5 @@ public class ProductEntity {
 
     @Column(nullable = true)
     private LocalDate expiry;
+
 }
