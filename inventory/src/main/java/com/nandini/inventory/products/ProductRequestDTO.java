@@ -15,4 +15,5 @@ public class ProductRequestDTO {
     private String brand;
     private String name;
     private LocalDate expiry;
+    private Double profit;
 }

@@ -19,7 +19,7 @@ public class ProductController {
     @PostMapping("/stock-in")
     public ResponseEntity<ProductEntity> stock_in(@RequestBody ProductRequestDTO body) {
         try {
-            var product = productService.addProduct(body.getPrice(), body.getQuantity(), body.getBrand(),body.getName(),body.getExpiry());
+            var product = productService.addProduct(body.getPrice(), body.getQuantity(), body.getBrand(),body.getName(),body.getExpiry(),body.getProfit());
             return ResponseEntity.ok(product);
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
